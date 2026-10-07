@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dispatch & Pitch — KINGS Editorial Magazine</title>
+  <meta name="description" content="Submit manuscript proposals, contact our London, Vienna, and Geneva bureaus, or inquire about private guild syndication.">
+  <meta name="keywords" content="Contact Kings Magazine, Submit Essay, Manuscript Pitch, Editorial Board, Bureaus, London, Vienna, Geneva">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages.css">
+</head>
+<body>
+
+  <!-- Top Global Reading Progress Bar -->
+  <div id="readingProgressBar"></div>
+
+  <!-- Masthead Utility Bar -->
+  <div class="masthead-bar">
+    <div class="container">
+      <div class="masthead-meta">
+        <span class="masthead-item">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span class="masthead-live-date">Monday, October 5, 2026</span>
+        </span>
+        <span class="masthead-item" style="color: var(--accent-gold);">
+          Issue No. 42 • Editorial Bureaus
+        </span>
+        <span class="masthead-item hide-on-mobile">
+          Submissions Open for Vol. VIII
+        </span>
+      </div>
+
+      <div class="masthead-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle visual theme">
+          <svg class="theme-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="theme-toggle-label">Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Header Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <a href="index.html" class="brand-logo-wrap" aria-label="Kings Editorial Journal">
+        <span class="brand-logo">KINGS<span class="logo-dot">.</span></span>
+        <span class="brand-tagline">Journal of Culture & Thought</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="blogs.html" class="nav-link">The Journal</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active">Dispatch & Pitch</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <a href="blogs.html" class="nav-icon-btn" title="Search articles" aria-label="Search articles">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+
+        <button class="nav-icon-btn bookmarks-drawer-trigger" title="Saved essays" aria-label="Open reading list">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="bookmark-count-badge" style="display: none;">0</span>
+        </button>
+
+        <button class="mobile-menu-toggle" aria-label="Open navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="mobile-drawer-header">
+        <span class="brand-logo" style="font-size: 1.8rem;">KINGS<span class="logo-dot">.</span></span>
+        <button class="reader-close-btn mobile-drawer-close" aria-label="Close menu">✕</button>
+      </div>
+      <ul class="mobile-drawer-links">
+        <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
+        <li><a href="blogs.html" class="mobile-nav-link">The Journal <span>→</span></a></li>
+        <li><a href="about.html" class="mobile-nav-link">About <span>→</span></a></li>
+        <li><a href="contact.html" class="mobile-nav-link active">Dispatch & Pitch <span>→</span></a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Bookmarks Slide-out Drawer -->
+  <div class="bookmarks-drawer-overlay mobile-drawer-overlay"></div>
+  <aside class="bookmarks-drawer" aria-label="Saved Bookmarks">
+    <div class="bookmarks-header">
+      <h3 style="font-size: 1.35rem;">Reading Sanctuary</h3>
+      <button class="reader-close-btn bookmarks-drawer-close" aria-label="Close reading sanctuary">✕</button>
+    </div>
+    <div class="bookmarks-list">
+      <!-- Injected via scripts/main.js -->
+    </div>
+  </aside>
+
+  <!-- Main Contact Content -->
+  <main id="mainContent">
+    <div class="container">
+      <div class="contact-split-wrap">
+        
+        <!-- Left Column: Bureau Info & Guidelines -->
+        <div class="contact-info-col">
+          <span class="badge-gold" style="margin-bottom: 1.25rem;">Editorial Chambers</span>
+          <h1>Manuscript Pitches & Inquiries</h1>
+          <p>
+            The Kings Editorial Board welcomes original treatises, critical reviews, and investigative essays from independent researchers, classicists, architects, and sovereign engineers.
+          </p>
+          <div class="gold-rule"></div>
+
+          <div class="contact-detail-list">
+            <div class="contact-detail-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>Electronic Inquiries</h4>
+                <p>editorial@kingsjournal.com • press@kingsjournal.com</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h4>London Bureau</h4>
+                <p>14 Berkeley Square, Mayfair, London W1J 6BL, United Kingdom</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>Deliberation Cadence</h4>
+                <p>The Masthead convenes every Thursday. Authors receive formal decisions within 10 business days.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem 1.75rem;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-gold);">Author Honorarium</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0;">
+              Commissioned long-form essays receive competitive editorial honoraria along with fine archival print editions bound in letterpress calfskin.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Pitch Form -->
+        <div>
+          <div class="pitch-form-card">
+            <h3 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Transmit a Dispatch</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 2rem;">
+              Fill in your thesis synopsis or inquiry. All transmissions are encrypted in transit.
+            </p>
+
+            <form id="pitchForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="pitchName">Author / Sender Name *</label>
+                  <input type="text" id="pitchName" class="form-input" placeholder="e.g. Lord Julian Vance" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pitchEmail">Electronic Mail *</label>
+                  <input type="email" id="pitchEmail" class="form-input" placeholder="e.g. julian@vance.org" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="pitchType">Subject of Inquiry *</label>
+                  <select id="pitchType" class="form-select">
+                    <option value="pitch">Manuscript Proposal / Pitch</option>
+                    <option value="press">Press & Syndication Rights</option>
+                    <option value="guild">Private Guild Membership</option>
+                    <option value="letter">Letter to the Chief Editor</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="pitchSubject">Working Title / Header *</label>
+                  <input type="text" id="pitchSubject" class="form-input" placeholder="e.g. Travertine and Acoustic Decoupling" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 2.5rem;">
+                <label class="form-label" for="pitchMessage">Synopsis or Message Body *</label>
+                <textarea id="pitchMessage" class="form-textarea" placeholder="Outline your first-principles argument, key references, and proposed reading length..." required></textarea>
+                <span class="char-counter" id="pitchCharCount">0 / 1200 characters</span>
+              </div>
+
+              <button type="submit" class="btn-gold" style="width: 100%; font-size: 0.95rem; padding: 0.9rem;">
+                Transmit to Masthead
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Editorial Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="font-size: 2rem;">KINGS<span class="logo-dot">.</span></a>
+          <p>
+            An authoritative independent journal celebrating the dignity of physical craft, sovereign computational philosophy, and the architecture of stillness.
+          </p>
+          <div style="margin-top: 1.5rem;">
+            <span class="badge-outline">Independent Editorial Foundation</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>The Journal</h5>
+          <ul class="footer-links">
+            <li><a href="blogs.html?cat=architecture" class="footer-link">Architecture</a></li>
+            <li><a href="blogs.html?cat=technology" class="footer-link">Sovereign Tech</a></li>
+            <li><a href="blogs.html?cat=philosophy" class="footer-link">Classical Ethics</a></li>
+            <li><a href="blogs.html?cat=culture" class="footer-link">Horology & Feasts</a></li>
+            <li><a href="blogs.html?cat=leadership" class="footer-link">High Agency</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>The Masthead</h5>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">Editorial Board</a></li>
+            <li><a href="about.html#manifesto" class="footer-link">The Kings Manifesto</a></li>
+            <li><a href="about.html#metrics" class="footer-link">Circulation & Audits</a></li>
+            <li><a href="contact.html" class="footer-link">Submit Manuscript</a></li>
+            <li><a href="contact.html" class="footer-link">Press Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Dispatches</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#dispatchHeading" class="footer-link">Weekly Dispatch</a></li>
+            <li><a href="blogs.html" class="footer-link">Complete Archives</a></li>
+            <li><a href="RULES.md" class="footer-link">Editorial Canon</a></li>
+            <li><a href="contact.html" class="footer-link">Guild Embassies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 KINGS Publishing House Ltd. All intellectual rights reserved.</div>
+        <div style="color: var(--accent-gold);">Crafted with Semantic HTML5, Vanilla CSS & Modern JS.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="scripts/data.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/contact.js"></script>
+</body>
+</html>
